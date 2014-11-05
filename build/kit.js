@@ -1,0 +1,1 @@
+!function(){var n={}||window._;n.merge=function(n){for(var r,e=1;e<arguments.length;e++)for(r in arguments[e])arguments[e].hasOwnProperty(r)&&(n[r]=arguments[e][r]);return n},window._||(window._=n)}();

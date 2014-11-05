@@ -1,1 +1,1 @@
-!function(){var n={}||window._;n.merge=function(n){for(var r,e=1;e<arguments.length;e++)for(r in arguments[e])arguments[e].hasOwnProperty(r)&&(n[r]=arguments[e][r]);return n},window._||(window._=n)}();
+!function(){var n=this._||{};n.merge=function(n){for(var r,t=1;t<arguments.length;t++)for(r in arguments[t])arguments[t].hasOwnProperty(r)&&(n[r]=arguments[t][r]);return n},window._=n}();

@@ -2,7 +2,7 @@
 //  (c) 2014- Bjarne Øverli
 
 (function() {
-    var _ = {} || window._;
+    var _ = this._ || {};
 
     // Objects
 
@@ -21,7 +21,5 @@
         return object;
     };
 
-    if (!window._) {
-        window._ = _;
-    }
+    window._ = _;
 })();

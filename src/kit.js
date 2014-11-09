@@ -1,3 +1,4 @@
+//  This is no underscore clone. Made just for the fun.
 //  http://github.com/bjarneo/kit
 //  (c) 2014- Bjarne Øverli
 
@@ -12,6 +13,10 @@
     // Recursively merge multiple objects to one
     _.merge = function (object) {
         var i = 1, key;
+        
+        if (!arguments.length) {
+            throw 'Error: No objects added to merge method!';
+        }
 
         for (; i < arguments.length; i++) {
             for (key in arguments[i]) {

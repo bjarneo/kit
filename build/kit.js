@@ -1,1 +1,1 @@
-!function(){var n=this._||{};n.merge=function(n){for(var r,t=1;t<arguments.length;t++)for(r in arguments[t])arguments[t].hasOwnProperty(r)&&(n[r]=arguments[t][r]);return n},window._=n}();
+!function(){var t=this._||{};t.merge=function(t){for(var e,r=1;r<arguments.length;r++)for(e in arguments[r])arguments[r].hasOwnProperty(e)&&(this.isObject(arguments[r][e])?(this.isObject(t[e])||(t[e]={}),t[e]=this.merge(t[e],arguments[r][e])):t[e]=arguments[r][e]);return t},t.isObject=function(t){return"[object Object]"===Object.prototype.toString.call(t)?!0:!1},window._=t}();

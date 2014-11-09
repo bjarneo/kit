@@ -19,9 +19,9 @@
                     if (this.isObject(arguments[i][key])) {
                         if (!this.isObject(object[key])) {
                             object[key] = {};
+                        } else {
+                            object[key] = this.merge(object[key], arguments[i][key]);
                         }
-                        
-                        object[key] = this.merge(object[key], arguments[i][key]);
                     } else {
                         object[key] = arguments[i][key];
                     }

@@ -1,13 +1,16 @@
 //  http://github.com/bjarneo/kit
 //  (c) 2014- Bjarne Øverli
 
-(function() {
-    var _ = this._ || {};
+(function () {
+    'use strict';
+    
+    //var _ = this._ || {};
+    var _ = {};
 
     // Objects
 
     // Recursively merge multiple objects to one
-    _.merge = function(object) {
+    _.merge = function (object) {
         var i = 1, key;
 
         for (; i < arguments.length; i++) {
@@ -30,7 +33,7 @@
     };
     
     // Check if input is object
-    _.isObject = function(object) {
+    _.isObject = function (object) {
         if (Object.prototype.toString.call(object) === '[object Object]') {
             return true;
         }
@@ -39,4 +42,4 @@
     };
 
     window._ = _;
-})();
+}());

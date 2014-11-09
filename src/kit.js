@@ -5,7 +5,6 @@
 (function () {
     'use strict';
     
-    //var _ = this._ || {};
     var _ = {};
 
     // Objects
@@ -37,9 +36,16 @@
         return object;
     };
     
-    // Check if input is object
     _.isObject = function (object) {
         if (Object.prototype.toString.call(object) === '[object Object]') {
+            return true;
+        }
+        
+        return false;
+    };
+    
+    _.isFunction = function (func) {
+        if (Object.prototype.toString.call(func) === '[object Function]') {
             return true;
         }
         

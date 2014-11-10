@@ -15,7 +15,7 @@ exports['test that logs kit framework'] = function(assert) {
     
     assert.equal(_.isFunction(function() {}), true, 'Assert isFunction should be true');
     assert.equal(_.isFunction(_), false, 'Assert isFunction should be false');
-;}
+};
 
 if (module == require.main) {
     require('test').run(exports);

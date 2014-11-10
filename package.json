@@ -1,0 +1,15 @@
+{
+    "name": "KitJS",
+    "version": "1.0.0",
+    "author": "Bjarne Øverli http://www.twitter.com/bjarneo_",
+    "description": "JavaScript Kit",
+    "scripts": {
+        "test": "node tests/kit.js"
+    },
+    "devDependencies": {
+        "test": ">=0.0.5",
+        "gulp": "*",
+        "gulp-jshint": "*",
+        "gulp-uglify": "*"
+    }
+}

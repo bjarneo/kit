@@ -1,6 +1,5 @@
 var _ = require('./../src/kit.js');
 
-// using assert passed to the test function that just logs failures
 exports['test that logs kit framework'] = function(assert) {
     var merge = _.merge(
         { a: 'aa' },

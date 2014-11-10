@@ -51,6 +51,17 @@
         
         return false;
     };
-
-    window._ = _;
-}());
+    
+    // Check if is node, amd or else we set it to window
+    if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+        module.exports = _; 
+    } else {
+        if (typeof define === 'function' && define.amd) {
+            define([], function() {
+                return _;
+            });
+        } else {
+            window._ = _;
+        }
+    }
+})();

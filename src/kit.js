@@ -52,6 +52,22 @@
         return false;
     };
     
+    _.isUndefined = function (value) {
+        if (Object.prototype.toString.call(value) === '[object Undefined]') {
+            return true;
+        }
+        
+        return false;
+    };
+    
+    _.isNull = function (value) {
+        if (Object.prototype.toString.call(value) === '[object Null]') {
+            return true;
+        }
+        
+        return false;
+    };
+    
     // Check if is node, amd or else we set it to window
     if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
         module.exports = _; 

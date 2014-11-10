@@ -15,6 +15,11 @@ exports['test that logs kit framework'] = function(assert) {
     
     assert.equal(_.isFunction(function() {}), true, 'Assert isFunction should be true');
     assert.equal(_.isFunction(_), false, 'Assert isFunction should be false');
+
+    var test;
+    assert.equal(_.isUndefined(test), true, 'Assert isUndefined should be true');
+    
+    assert.equal(_.isNull(null), true, 'Assert isNull should be true');
 };
 
 if (module == require.main) {

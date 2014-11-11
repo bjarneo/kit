@@ -7,8 +7,6 @@
     
     var _ = {};
 
-    // Objects
-
     // Recursively merge multiple objects to one
     _.merge = function (object) {
         var i = 1, key;
@@ -62,6 +60,46 @@
     
     _.isNull = function (value) {
         if (Object.prototype.toString.call(value) === '[object Null]') {
+            return true;
+        }
+        
+        return false;
+    };
+    
+    _.isArray = function (array) {
+        if (Object.prototype.toString.call(array) === '[object Array]') {
+            return true;
+        }
+        
+        return false;
+    };
+    
+    _.isDate = function (date) {
+        if (Object.prototype.toString.call(date) === '[object Date]') {
+            return true;
+        }
+        
+        return false;
+    };
+    
+    _.isRegExp = function (regexp) {
+        if (Object.prototype.toString.call(regexp) === '[object RegExp]') {
+            return true;
+        }
+        
+        return false;
+    };
+    
+    _.isString = function (string) {
+        if (Object.prototype.toString.call(string) === '[object String]') {
+            return true;
+        }
+        
+        return false;
+    };
+    
+    _.isNumber = function (number) {
+        if (Object.prototype.toString.call(number) === '[object Number]') {
             return true;
         }
         

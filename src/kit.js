@@ -106,6 +106,22 @@
         return false;
     };
     
+    _.isInteger = function (integer) {
+        return parseInt(integer) === integer;
+    };
+    
+    _.isFloat = function (number) {
+            return number === +number && number !== (number|0);
+    };
+    
+    _.isGlobal = function (input) {
+        if (Object.prototype.toString.call(input) === '[object global]') {
+            return true;
+        }
+        
+        return false;
+    };
+    
     // Check if is node, amd or else we set it to window
     if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
         module.exports = _; 

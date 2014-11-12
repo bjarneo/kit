@@ -8,8 +8,25 @@
     },
     "devDependencies": {
         "test": ">=0.0.5",
+        "tape": "*",
         "gulp": "*",
         "gulp-jshint": "*",
         "gulp-uglify": "*"
+    },
+    "testling": {
+        "files": "tests/kit-testling.js",
+        "browsers": [
+          "ie/6..latest",
+          "chrome/22..latest",
+          "firefox/16..latest",
+          "safari/latest",
+          "opera/11.0..latest",
+          "iphone/6",
+          "ipad/6",
+          "android-browser/latest"
+        ]
+    },
+    "scripts": {
+        "test": "tape tests/kit-testling.js"
     }
 }

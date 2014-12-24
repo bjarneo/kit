@@ -10,6 +10,19 @@
     var ObjProto = Object.prototype,
         toString = ObjProto.toString;
 
+    var types = {
+        object: '[object Object]',
+        function: '[object Function]',
+        undefined: '[object Undefined]',
+        null: '[object Null]',
+        array: '[object Array]',
+        date: '[object Date]',
+        regexp: '[object RegExp]',
+        string: '[object String]',
+        number: '[object Number]',
+        global: '[object global]'
+    };
+
     // Recursively merge multiple objects to one
     _.merge = function (object) {
         var i = 1, key;
@@ -38,7 +51,7 @@
     };
 
     _.isObject = function (object) {
-        if (toString.call(object) === '[object Object]') {
+        if (toString.call(object) === types.object) {
             return true;
         }
 
@@ -46,7 +59,7 @@
     };
 
     _.isFunction = function (func) {
-        if (toString.call(func) === '[object Function]') {
+        if (toString.call(func) === types.function) {
             return true;
         }
 
@@ -54,7 +67,7 @@
     };
 
     _.isUndefined = function (value) {
-        if (toString.call(value) === '[object Undefined]') {
+        if (toString.call(value) === types.undefined) {
             return true;
         }
 
@@ -62,7 +75,7 @@
     };
 
     _.isNull = function (value) {
-        if (toString.call(value) === '[object Null]') {
+        if (toString.call(value) === types.null) {
             return true;
         }
 
@@ -70,7 +83,7 @@
     };
 
     _.isArray = function (array) {
-        if (toString.call(array) === '[object Array]') {
+        if (toString.call(array) === types.array) {
             return true;
         }
 
@@ -78,7 +91,7 @@
     };
 
     _.isDate = function (date) {
-        if (toString.call(date) === '[object Date]') {
+        if (toString.call(date) === types.date) {
             return true;
         }
 
@@ -86,7 +99,7 @@
     };
 
     _.isRegExp = function (regexp) {
-        if (toString.call(regexp) === '[object RegExp]') {
+        if (toString.call(regexp) === types.regexp) {
             return true;
         }
 
@@ -94,7 +107,7 @@
     };
 
     _.isString = function (string) {
-        if (toString.call(string) === '[object String]') {
+        if (toString.call(string) === types.string) {
             return true;
         }
 
@@ -102,7 +115,7 @@
     };
 
     _.isNumber = function (number) {
-        if (toString.call(number) === '[object Number]') {
+        if (toString.call(number) === types.number) {
             return true;
         }
 
@@ -118,7 +131,7 @@
     };
 
     _.isGlobal = function (input) {
-        if (toString.call(input) === '[object global]') {
+        if (toString.call(input) === types.global) {
             return true;
         }
 

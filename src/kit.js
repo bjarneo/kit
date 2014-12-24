@@ -130,7 +130,7 @@
         module.exports = _;
     } else if (typeof define === 'function' && define.amd) {
         define([], function() {
-                return _;
+            return _;
         });
     } else {
         window._ = _;

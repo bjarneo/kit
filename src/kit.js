@@ -2,7 +2,7 @@
 //  http://github.com/bjarneo/kit
 //  (c) 2014- Bjarne Øverli
 
-(function () {
+(function (window, define) {
     'use strict';
 
     var _ = {};
@@ -127,6 +127,7 @@
     };
 
     _.isFloat = function (number) {
+        /* jshint bitwise: false */
         return number === +number && number !== (number|0);
     };
 

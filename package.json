@@ -11,6 +11,7 @@
         "tape": "*",
         "gulp": "*",
         "gulp-jshint": "*",
-        "gulp-uglify": "*"
+        "gulp-uglify": "*",
+        "gulp-concat": "*"
     }
 }

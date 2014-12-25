@@ -50,6 +50,15 @@
         return object;
     };
 
+    // arrays
+    _.first = function (array) {
+        return (array.length) ? array[0] : null;
+    };
+
+    _.last = function (array) {
+        return (array.length) ? array[array.length - 1] : null;
+    };
+
     _.isObject = function (object) {
         if (toString.call(object) === types.object) {
             return true;

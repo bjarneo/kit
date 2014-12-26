@@ -1,7 +1,7 @@
 'use strict';
 
 var _ = require('./../src/kit.js');
-
+// Create better tests with mocha and chai
 exports['test kit framework'] = function(assert) {
     var merge = _.merge(
         { a: 'aa', b: { bb: 'bbb' } },

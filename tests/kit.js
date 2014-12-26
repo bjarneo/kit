@@ -11,6 +11,8 @@ exports['test kit framework'] = function(assert) {
     ), test;
 
     var arr = ['one', 'two', 'three'],
+        arr2 = ['one', 'two', 'three'],
+        removed = _.remove(arr2, 'three', 'two'),
         emptyArr = [];
 
     assert.equal(merge.a, 'aa', 'Assert merge.a === "aa" should return true');
@@ -20,6 +22,7 @@ exports['test kit framework'] = function(assert) {
     assert.equal(_.first(emptyArr), null, 'Should return null on empty array');
     assert.equal(_.last(arr), 'three', 'Should return last element of an array');
     assert.equal(_.last(emptyArr), null, 'Should return null on an empty array');
+    assert.equal(removed[0], 'one', 'Should remove two elements from the array');
 
     assert.equal(_.isObject({}), true, 'Assert isObject({}) should return true');
     assert.equal(_.isFunction(function() {}), true, 'Assert isFunction(function() {}) should return true');

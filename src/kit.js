@@ -50,13 +50,50 @@
         return object;
     };
 
-    // arrays
+    _.each = function (array, fn) {
+        var len = array.length, i = 0;
+
+        if (!array.length) {
+            throw new TypeError('Should add an array');
+        } else if (typeof fn !== 'function') {
+            throw new TypeError('No callback function added.');
+        }
+
+        for (; i < len; i++) {
+            /*jshint validthis:true */
+            fn.call(this, array[i], i);
+        }
+    };
+
+    // Arrays
+
+    // get first element in an array
     _.first = function (array) {
         return (array.length) ? array[0] : null;
     };
 
+    // get last element in an array
     _.last = function (array) {
         return (array.length) ? array[array.length - 1] : null;
+    };
+
+    // Remove as many elements you want from an array
+    _.remove = function (array) {
+        var len = arguments.length;
+
+        if (!len) {
+            return array;
+        }
+
+        _.each(arguments, function (arg) {
+            var index = array.indexOf(arg);
+
+            if (index > -1) {
+                array.splice(index, 1);
+            }
+        }.bind(this));
+
+        return array;
     };
 
     _.isObject = function (object) {

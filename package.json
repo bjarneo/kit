@@ -4,11 +4,11 @@
     "author": "Bjarne Øverli http://www.twitter.com/bjarneo_",
     "description": "JavaScript Kit",
     "scripts": {
-        "test": "node tests/kit.js"
+        "test": "node_modules/mocha/bin/mocha tests/*.js"
     },
     "devDependencies": {
-        "test": ">=0.0.5",
-        "tape": "*",
+        "mocha": "2.1.0",
+        "chai": "1.10.0",
         "gulp": "*",
         "gulp-jshint": "*",
         "gulp-uglify": "*",

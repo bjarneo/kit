@@ -28,7 +28,7 @@
         var i = 1, key;
 
         if (!arguments.length) {
-            throw 'Error: No objects added to merge method!';
+            return {};
         }
 
         for (; i < arguments.length; i++) {
@@ -69,12 +69,20 @@
 
     // get first element in an array
     _.first = function (array) {
-        return (array.length) ? array[0] : null;
+        if (!array || !array.length) {
+            return null;
+        }
+
+        return array[0];
     };
 
     // get last element in an array
     _.last = function (array) {
-        return (array.length) ? array[array.length - 1] : null;
+        if (!array || !array.length) {
+            return null;
+        }
+
+        return array[array.length - 1];
     };
 
     // Remove as many elements you want from an array
@@ -99,7 +107,7 @@
     _.unique = function (array) {
         var uniqueArray = [];
 
-        if (!array.length) {
+        if (!array || !array.length) {
             return null;
         }
 

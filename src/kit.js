@@ -91,9 +91,25 @@
             if (index > -1) {
                 array.splice(index, 1);
             }
-        }.bind(this));
+        });
 
         return array;
+    };
+
+    _.unique = function (array) {
+        var clean = [];
+
+        if (!array.length) {
+            return null;
+        }
+
+        _.each(array, function (item) {
+            if (clean.indexOf(item) === -1) {
+                clean.push(item);
+            }
+        });
+
+        return clean;
     };
 
     _.isObject = function (object) {

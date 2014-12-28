@@ -97,19 +97,19 @@
     };
 
     _.unique = function (array) {
-        var clean = [];
+        var uniqueArray = [];
 
         if (!array.length) {
             return null;
         }
 
         _.each(array, function (item) {
-            if (clean.indexOf(item) === -1) {
-                clean.push(item);
+            if (uniqueArray.indexOf(item) === -1) {
+                uniqueArray.push(item);
             }
         });
 
-        return clean;
+        return uniqueArray;
     };
 
     _.isObject = function (object) {

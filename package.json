@@ -4,7 +4,9 @@
     "author": "Bjarne Øverli http://www.twitter.com/bjarneo_",
     "description": "JavaScript Kit",
     "scripts": {
-        "test": "node_modules/mocha/bin/mocha tests/*.js"
+        "test": "./node_modules/mocha/bin/mocha tests/*.js",
+        "test-nyan": "./node_modules/mocha/bin/mocha --reporter nyan tests/*.js",
+        "test-watch": "./node_modules/mocha/bin/mocha --watch --reporter nyan tests/*.js"
     },
     "devDependencies": {
         "mocha": "2.1.0",

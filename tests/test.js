@@ -147,7 +147,7 @@ describe('Kit library', function () {
 
     describe('#isFunction()', function () {
         it('Should return true if function is passed', function () {
-            expect(_.isFunction(function() {})).to.be.true;
+            expect(_.isFunction(function () {})).to.be.true;
             expect(_.isFunction(new Function())).to.be.true;
         });
 
@@ -310,6 +310,11 @@ describe('Kit library', function () {
     describe('#isGlobal()', function () {
         it('Should return true if a global object is passed', function () {
             expect(_.isGlobal(global)).to.be.true;
+        });
+
+        it('Should return false if another object or element is passed', function () {
+            expect(_.isGlobal({})).to.be.false;
+            expect(_.isGlobal(function () {})).to.be.false;
         });
     });
 });

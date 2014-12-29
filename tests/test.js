@@ -271,6 +271,7 @@ describe('Kit library', function () {
         it('Should return true if an integer is passed', function () {
             expect(_.isInteger(2)).to.be.true;
             expect(_.isInteger(0)).to.be.true;
+            expect(_.isInteger(10.0)).to.be.true;
             expect(_.isInteger(-2)).to.be.true;
         });
 

@@ -28,7 +28,7 @@
     _.each = function (array, fn) {
         var len = array.length, i = 0;
 
-        if (!array.length) {
+        if (!array || !array.length) {
             throw new TypeError('Should add an array');
         } else if (typeof fn !== 'function') {
             throw new TypeError('No callback function added.');

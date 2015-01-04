@@ -103,36 +103,47 @@
     };
 
     // Remove as many elements you want from an array
-    _.remove = function (array) {
+    _.remove = function (array, all) {
         var len = arguments.length;
 
         if (!len) {
             return array;
         }
 
-        _.each(arguments, function (arg) {
-            var index = array.indexOf(arg);
+        while (len--) {
+            var index = array.indexOf(arguments[len]);
 
             if (index > -1) {
-                array.splice(index, 1);
+                if (all) {
+                    while (index !== -1) {
+                        array.splice(index, 1);
+
+                        index = array.indexOf(arguments[len], index);
+                    }
+                } else {
+                    array.splice(index, 1);
+                }
             }
-        });
+        }
 
         return array;
     };
 
+    // Speed test http://jsperf.com/js-unique
     _.unique = function (array) {
-        var uniqueArray = [];
+        var uniqueArray = [], len;
 
         if (!array || !array.length) {
             return null;
         }
 
-        _.each(array, function (item) {
-            if (uniqueArray.indexOf(item) === -1) {
-                uniqueArray.push(item);
+        len = array.length;
+
+        while (len--) {
+            if (uniqueArray.indexOf(array[len]) === -1) {
+                uniqueArray.push(array[len]);
             }
-        });
+        }
 
         return uniqueArray;
     };

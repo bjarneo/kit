@@ -41,8 +41,6 @@ describe('Kit library', function () {
                 }
             });
         });
-
-
     });
 
     describe('#first()', function () {
@@ -95,6 +93,13 @@ describe('Kit library', function () {
             removed.should.deep.equal(['a', 'c', 'd']);
         });
 
+        it('Should remove all elements passed from an array', function () {
+            var a = ['a', 'b', 'c', 'd', 'a', 'a'],
+            removed = _.remove(a, true, 'a');
+
+            removed.should.deep.equal(['b', 'c', 'd']);
+        });
+
         it('Should remove elements passed from an array', function () {
             var a = ['a', 'b', 'c', 'd'],
                 removed = _.remove(a, 'b', 'c');
@@ -115,7 +120,7 @@ describe('Kit library', function () {
             var a = ['a', 'b', 'c', 'd', 'b'],
                 unique = _.unique(a);
 
-            unique.should.deep.equal(['a', 'b', 'c', 'd']);
+            unique.should.deep.equal(['b', 'd', 'c', 'a']);
         });
 
         it('Should return null if no array is passed', function () {
